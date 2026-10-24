@@ -5,3 +5,5 @@ declares the Foundry prompt agent `MCPDetectionSampleAgent`, so ADCM also compar
 deployed agent's model and tools with what is declared here.
 
 Synthetic sample for ADCM guardrails testing. Identifiers in the manifest are illustrative.
+
+Changes to this repository go through a pull request with the guardrails check.
