@@ -2,8 +2,8 @@ schema: adcm.agent/v1
 name: mcp-detection-helper
 description: Answers Microsoft 365 administration questions through the Microsoft enterprise MCP server.
 baseline_version: 1.1.0
-owner: angelica.faber@contoso.com
-sponsor: security.lead@contoso.com
+owner: kozeta@msafaber.com
+sponsor: wes@msafaber.com
 data_classification: general
 invocation: interactive
 identity:
