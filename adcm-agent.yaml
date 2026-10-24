@@ -1,0 +1,27 @@
+schema: adcm.agent/v1
+name: mcp-detection-helper
+description: Answers Microsoft 365 administration questions through the Microsoft enterprise MCP server.
+baseline_version: 1.0.0
+owner: angelica.faber@contoso.com
+sponsor: security.lead@contoso.com
+data_classification: general
+identity:
+  type: entra_agent_id
+  blueprint_id: 00000000-0000-0000-0000-00000000a001
+model:
+  deployment: gpt-4o-mini
+  content_safety:
+    enabled: true
+    rai_policy: Microsoft.DefaultV2
+tools:
+  - name: microsoft_mcp_enterprise
+    type: mcp
+    endpoint: https://mcp.svc.cloud.microsoft/enterprise
+    write: false
+    approval: none
+telemetry:
+  enabled: true
+deployments:
+  - platform: foundry
+    project_endpoint: https://mcp-foundry-test-acct.services.ai.azure.com/api/projects/mcp-detection-project
+    agent_name: MCPDetectionSampleAgent
